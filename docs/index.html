@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matriz Comparativa de Conectividade Industrial | O Plataforma Studio</title>
+  <meta name="description" content="Ferramenta interativa de avaliação ponderada (MCDA) para seleção de soluções de software de conectividade industrial (OPC UA, Modbus, CNC/PLC, IIoT) para O Plataforma Studio.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div class="title-area">
+        <h1>
+          ⚙️ MATRIZ COMPARATIVA DE CONECTIVIDADE INDUSTRIAL
+          <span class="badge-ska">O Plataforma Studio</span>
+        </h1>
+        <p>Estudo Técnico de Mercado & Motor Interativo de Decisão por Pesos (MCDA)</p>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-primary" id="btnExportCSV">
+          📥 Exportar Relatório CSV
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    <div class="main-grid">
+
+      <!-- Sidebar: Sliders & Controls -->
+      <aside class="sidebar">
+        <h2>
+          🎛️ Pesos dos Critérios
+        </h2>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">
+          Ajuste a importância (0 a 10) de cada característica para recalcular dinamicamente a solução ideal para o seu projeto.
+        </p>
+
+        <!-- Presets -->
+        <div class="preset-title">⚡ Cenários Pré-configurados</div>
+        <div class="presets-grid" id="presetsContainer">
+          <!-- Rendered via JS -->
+        </div>
+
+        <!-- Sliders Header -->
+        <div class="sliders-header">
+          <h3>Ajuste Fino de Pesos</h3>
+          <button class="btn-reset" id="btnResetWeights">Resetar</button>
+        </div>
+
+        <!-- Sliders List -->
+        <div class="sliders-list" id="slidersList">
+          <!-- Rendered via JS -->
+        </div>
+      </aside>
+
+      <!-- Content Area: Podium & Table -->
+      <main class="content-area">
+
+        <!-- Top 3 Winners Podium -->
+        <section>
+          <h2 style="font-size: 1.3rem; color: var(--cyan-accent); margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+            🏆 Ranking de Soluções Recomendadas
+          </h2>
+          <div class="winners-section" id="podiumContainer">
+            <!-- Rendered via JS -->
+          </div>
+        </section>
+
+        <!-- Matrix Table Card -->
+        <section class="table-card">
+          <div class="table-header-bar">
+            <h2>📊 Matriz Geral de Mercado (20 Soluções Avaliadas)</h2>
+            <div class="search-filters">
+              <input type="text" id="searchInput" class="search-input" placeholder="🔍 Buscar solução, fornecedor..." />
+              <select id="licenseFilterSelect" class="filter-select">
+                <option value="all">Todas as Licenças</option>
+                <option value="Free">Gratuitas / Open Source</option>
+                <option value="Commercial">Comerciais</option>
+                <option value="Dual">Licença Dual</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Solução / Fornecedor</th>
+                  <th>Licença</th>
+                  <th>Execução / Arquitetura</th>
+                  <th>Métricas</th>
+                  <th>Adequação (Fit Score)</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="matrixTbody">
+                <!-- Rendered via JS -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Estudo Técnico da Camada de Conectividade Industrial - <strong>O Plataforma Studio (SKA © 2026)</strong></p>
+      <p style="margin-top: 4px; font-size: 0.78rem;">Página estática pronta para hospedagem no <strong>GitHub Pages</strong> | Desenvolvida com HTML5, CSS3 Vanilla e ES6 JS.</p>
+    </footer>
+  </div>
+
+  <!-- Technical Profile Modal -->
+  <div class="modal-overlay" id="techModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modalBody">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="solutionsData.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
