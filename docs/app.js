@@ -1,6 +1,6 @@
 /**
  * Application Engine for Industrial Connectivity MCDA Matrix (GitHub Pages)
- * O Plataforma Studio (SKA) - 20 Soluções, 15 Critérios
+ * O Plataforma Studio (SKA) - 20 Soluções, 10 Critérios
  */
 
 let currentWeights = {};
@@ -229,8 +229,7 @@ function renderTable(solutions) {
             <span title="Cobertura CNC" style="background: rgba(0,210,255,0.1); padding: 2px 5px; border-radius: 3px;">⚙️ ${sol.scores.cnc}</span>
             <span title="Cobertura PLC" style="background: rgba(0,210,255,0.1); padding: 2px 5px; border-radius: 3px;">🔌 ${sol.scores.plc}</span>
             <span title="Store & Forward" style="background: rgba(0,210,255,0.1); padding: 2px 5px; border-radius: 3px;">🛡️ ${sol.scores.sf}</span>
-            <span title="Gestão de Frota" style="background: rgba(0,210,255,0.1); padding: 2px 5px; border-radius: 3px;">📡 ${sol.scores.fleet}</span>
-            <span title="Edge Analytics" style="background: rgba(0,210,255,0.1); padding: 2px 5px; border-radius: 3px;">🧠 ${sol.scores.analytics}</span>
+            <span title="Leveza / Footprint" style="background: rgba(0,210,255,0.1); padding: 2px 5px; border-radius: 3px;">⚡ ${sol.scores.light}</span>
           </div>
         </td>
         <td>
@@ -310,27 +309,6 @@ function openModal(solutionId) {
       <div class="detail-item">
         <h4>🚀 Esforço de Implantação</h4>
         <p>${sol.details.esforcoImplantacao}</p>
-      </div>
-
-      <!-- Novos Critérios Estratégicos -->
-      <div class="detail-item">
-        <h4>📡 Gestão de Frota (Fleet Management)</h4>
-        <p>${sol.details.gestaoFrota || 'Disponível via console administrativo ou orquestradores de borda.'}</p>
-      </div>
-
-      <div class="detail-item">
-        <h4>🔎 Autodescoberta (Tag Browsing)</h4>
-        <p>${sol.details.autodescoberta || 'Suporte a importação visual e varredura de rede.'}</p>
-      </div>
-
-      <div class="detail-item">
-        <h4>✍️ Escrita Bi-direcional (Write-Back)</h4>
-        <p>${sol.details.escritaBiDirecional || 'Suporte a envio de comandos e escrita em registradores.'}</p>
-      </div>
-
-      <div class="detail-item">
-        <h4>🧠 Edge Analytics & Lógica Local</h4>
-        <p>${sol.details.edgeAnalytics || 'Processamento local e regras de agregação no Edge.'}</p>
       </div>
 
       <div class="detail-item full-width" style="border-color: var(--cyan-accent); background: rgba(0, 210, 255, 0.05);">
