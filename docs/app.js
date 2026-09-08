@@ -60,7 +60,7 @@ function applyPreset(presetId) {
   recalculateAndRender();
 }
 
-// Render Sliders List
+// Render Sliders List with Hover Tooltips
 function renderSliders() {
   const container = document.getElementById('slidersList');
   if (!container) return;
@@ -68,10 +68,12 @@ function renderSliders() {
   container.innerHTML = CRITERIA_DEFINITIONS.map(c => `
     <div class="slider-group">
       <div class="slider-label">
-        <span>${c.icon} ${c.name}</span>
+        <span class="criteria-name-tooltip" data-tooltip="${c.desc}">
+          ${c.icon} ${c.name} <span class="info-icon" title="${c.desc}">ℹ️</span>
+        </span>
         <span class="slider-val" id="val-${c.id}">${currentWeights[c.id]}</span>
       </div>
-      <input type="range" id="slider-${c.id}" min="0" max="10" step="1" value="${currentWeights[c.id]}" data-criteria-id="${c.id}" />
+      <input type="range" id="slider-${c.id}" min="0" max="10" step="1" value="${currentWeights[c.id]}" data-criteria-id="${c.id}" title="${c.desc}" />
     </div>
   `).join('');
 

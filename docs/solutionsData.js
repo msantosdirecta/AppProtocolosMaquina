@@ -10,13 +10,13 @@ const CRITERIA_DEFINITIONS = [
   
   // Cobertura Fabril
   { id: 'cnc', name: 'Cobertura CNC', weight: 5, category: 'Fabril', icon: '⚙️', desc: 'Suporte nativo a comandos Fanuc FOCAS, Siemens Sinumerik, Heidenhain, Haas, etc.' },
-  { id: 'plc', name: 'Cobertura PLC', weight: 5, category: 'Fabril', icon: '🔌', desc: 'Suporte amplo a controladores (Siemens S7, Rockwell EtherNet/IP, Modbus, Omron)' },
+  { id: 'plc', name: 'Cobertura PLC', weight: 5, category: 'Fabril', icon: '🔌', desc: 'Suporte amplo a controladores (Siemens S7, Allen-Bradley EtherNet/IP, Modbus, Omron)' },
   { id: 'wireless', name: 'Sensores Sem Fio & IO-Link', weight: 5, category: 'Fabril', icon: '📡', desc: 'Suporte a sensores de vibração/temp (LoRaWAN, BLE, IO-Link, Câmeras)' },
 
   // Arquitetura & Desempenho
-  { id: 'sf', name: 'Resiliência (Store & Forward)', weight: 5, category: 'Arquitetura', icon: '🛡️', desc: 'Buffering local em memória/disco durante quedas de rede' },
-  { id: 'light', name: 'Leveza / Baixo Footprint', weight: 5, category: 'Arquitetura', icon: '⚡', desc: 'Baixo consumo de CPU/RAM em ambiente Edge (Dæmons C/Go vs Java Heavy)' },
-  { id: 'standards', name: 'Padrões Abertos (UNS)', weight: 5, category: 'Arquitetura', icon: '🌐', desc: 'Aderência total a OPC UA, MQTT, Sparkplug B, REST JSON e ISA-95' },
+  { id: 'sf', name: 'Resiliência (Store & Forward)', weight: 5, category: 'Arquitetura', icon: '🛡️', desc: 'Buffering local em memória/disco durante quedas de rede para prevenção de perda de dados' },
+  { id: 'light', name: 'Leveza / Baixo Footprint', weight: 5, category: 'Arquitetura', icon: '⚡', desc: 'Baixo consumo de CPU/RAM em ambiente Edge (Dæmons C/Go vs Java SCADA Heavy)' },
+  { id: 'standards', name: 'Padrões Abertos (UNS)', weight: 5, category: 'Arquitetura', icon: '🌐', desc: 'Aderência total a OPC UA, MQTT, Sparkplug B, REST JSON e ISA-95 (Unified Namespace)' },
 
   // Operacional & Controle
   { id: 'ease', name: 'Facilidade de Implantação', weight: 5, category: 'Operacional', icon: '🚀', desc: 'Baixa complexidade de instalação, configuração rápida (.conf, wizards, Docker)' },
